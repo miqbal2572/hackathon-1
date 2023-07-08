@@ -12,9 +12,9 @@ export default function Page({ params }: { params: { id: string } }) {
   const result = getProductDetails(params.id);
 
   return (
-    <div className="flex justify-evenly mt-10 py-10 flex-wrap flex-col md:flex-row items-center">
+    <div className="flex justify-evenly mt-10 py-10 flex-wrap">
       {result.map((product) => (
-        <div key={product.id} className="flex justify-between gap-6 ">
+        <div key={product.id} className="flex justify-between gap-6 flex-col md:flex-row items-center">
           <div>
             <Image src={product.image} alt={product.name} />
           </div>
